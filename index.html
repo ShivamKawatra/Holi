@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holi 2026!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #ff007f;
+            --yellow: #ffd700;
+            --purple: #8a2be2;
+            --green: #32cd32;
+            --orange: #ff4500;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-color: #fffaf0;
+            font-family: 'Montserrat', sans-serif;
+            cursor: none;
+        }
+
+        /* Pichkari Cursor */
+        .pichkari-cursor {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: background-color 2s ease;
+            box-shadow: 0 0 15px currentColor;
+            border: 3px solid white;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(135deg, var(--pink), var(--purple), var(--orange));
+            padding: 15px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+        }
+
+        nav a:hover {
+            transform: scale(1.1);
+            text-shadow: 0 0 10px rgba(255,255,255,0.8);
+        }
+        
+        /* Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(135deg, var(--green), var(--yellow), var(--pink));
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.3) rotate(10deg);
+        }
+
+        /* Animated Gradient Background */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #ffb3d9, #b3e5fc, #e1bee7, #fff9c4, #ffccbc, #c5e1a5);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--pink), var(--purple), var(--orange), var(--green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container p {
+            font-size: 1.5rem;
+            color: #444;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Particle/Splash Styling */
+        .splash {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: scale(0);
+            animation: burst 0.6s ease-out forwards;
+        }
+
+        @keyframes burst {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        .instruction {
+            position: fixed;
+            bottom: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            color: #888;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home">🏠 Home</a></li>
+            <li><a href="#about">🎨 About Holi</a></li>
+            <li><a href="#gallery">📸 Gallery</a></li>
+            <li><a href="#contact">📧 Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="bg-overlay"></div>
+
+    <!-- Pichkari Cursor -->
+    <div class="pichkari-cursor"></div>
+
+    <div class="container">
+        <h1>Happy Holi!</h1>
+        <p>Spread Love & Colors</p>
+    </div>
+
+    <div class="instruction">✨ Tap anywhere to splash colors! ✨</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>🌈 Celebrate the Festival of Colors 🌈</p>
+        <div class="social-icons">
+            <a href="#">💜</a>
+            <a href="#">💛</a>
+            <a href="#">💚</a>
+            <a href="#">💗</a>
+        </div>
+        <p>&copy; 2026 Happy Holi | Made with ❤️</p>
+    </footer>
+
+    <script>
+        const colors = ['#ff007f', '#ffd700', '#8a2be2', '#32cd32', '#ff4500', '#00ced1'];
+        const cursor = document.querySelector('.pichkari-cursor');
+        let currentColorIndex = 0;
+
+        // Update cursor position
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Change cursor color every 2 seconds
+        setInterval(() => {
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+            cursor.style.backgroundColor = colors[currentColorIndex];
+        }, 2000);
+
+        // Initialize cursor color
+        cursor.style.backgroundColor = colors[0];
+
+        document.addEventListener('click', (e) => {
+            createSplash(e.clientX, e.clientY);
+        });
+
+        function createSplash(x, y) {
+            // Create 8-10 particles per click
+            for (let i = 0; i < 10; i++) {
+                const splash = document.createElement('div');
+                splash.classList.add('splash');
+                
+                // Random size and color
+                const size = Math.random() * 80 + 20;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                splash.style.width = `${size}px`;
+                splash.style.height = `${size}px`;
+                splash.style.backgroundColor = color;
+                
+                // Position with slight randomness for a "splatter" effect
+                const offsetX = (Math.random() - 0.5) * 100;
+                const offsetY = (Math.random() - 0.5) * 100;
+                
+                splash.style.left = `${x + offsetX - size/2}px`;
+                splash.style.top = `${y + offsetY - size/2}px`;
+                
+                // Blur for powder effect
+                splash.style.filter = `blur(${Math.random() * 10}px)`;
+
+                document.body.appendChild(splash);
+
+                // Cleanup
+                setTimeout(() => {
+                    splash.remove();
+                }, 600);
+            }
+        }
+    </script>
+</body>
+</html>
